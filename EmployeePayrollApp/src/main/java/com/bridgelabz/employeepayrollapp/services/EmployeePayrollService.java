@@ -10,33 +10,33 @@ import com.bridgelabz.employeepayrollapp.model.EmployeePayrollData;
 
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService {
-	
-	  public List<EmployeePayrollData> getAllEmployeeData() {
-		  List<EmployeePayrollData> empDataList = new ArrayList<>();
-		  empDataList.add(new EmployeePayrollData(1,new EmployeePayrollDTO( "Sanjay", 2000)));
-	        return empDataList;
-	    }
+	List<EmployeePayrollData> empDataList = new ArrayList<>();
 
-	    public EmployeePayrollData getEmployeeDataById(int empId) {
-	    	EmployeePayrollData ePayrollData = null;
-			ePayrollData = new EmployeePayrollData(1,new EmployeePayrollDTO( "Sanjay", 2000));
-	        return ePayrollData;
-	    }
+	public List<EmployeePayrollData> getAllEmployeeData() {
+		return empDataList;
+	}
 
-	    public EmployeePayrollData addEmployeePayrollData(EmployeePayrollDTO employeeDTO) {
-	    	EmployeePayrollData ePayrollData = null;
-			ePayrollData = new EmployeePayrollData(1, employeeDTO);
-	        return ePayrollData;
-	    }
+	public EmployeePayrollData getEmployeeDataById(int empId) {
+		return empDataList.get(empId - 1);
+	}
 
-	    public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO employeeDTO) {
-	    	EmployeePayrollData ePayrollData = null;
-			ePayrollData = new EmployeePayrollData(1, employeeDTO);
-	        return ePayrollData;
-	    }
+	public EmployeePayrollData addEmployeePayrollData(EmployeePayrollDTO employeeDTO) {
+		EmployeePayrollData ePayrollData = null;
+		ePayrollData = new EmployeePayrollData(empDataList.size() + 1, employeeDTO);
+		empDataList.add(ePayrollData);
+		return ePayrollData;
+	}
 
-	    public EmployeePayrollData deleteEmployeePayrollData(int empId) {
-	        return null;
-	    }
+	public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO employeeDTO) {
+		EmployeePayrollData ePayrollData = this.getEmployeeDataById(empId);
+		ePayrollData.setEmpName(employeeDTO.empName);
+		ePayrollData.setSalary(employeeDTO.salary);
+		empDataList.set(empId - 1, ePayrollData);
+		return ePayrollData;
+	}
+
+	public EmployeePayrollData deleteEmployeePayrollData(int empId) {
+		return empDataList.remove(empId - 1);
+	}
 
 }

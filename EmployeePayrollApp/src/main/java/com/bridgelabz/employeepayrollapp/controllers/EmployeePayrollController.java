@@ -22,10 +22,9 @@ import com.bridgelabz.employeepayrollapp.services.IEmployeePayrollService;
 @RestController
 @RequestMapping("/employeepayrollservice")
 public class EmployeePayrollController {
-	
+
 	@Autowired
 	IEmployeePayrollService iEmployeePayrollService;
-	
 
 	@RequestMapping(value = { "", "/", "get" })
 	public ResponseEntity<ResponseDTO> getEmployeePayrollData() {
@@ -52,7 +51,8 @@ public class EmployeePayrollController {
 	}
 
 	@PutMapping("/update/{empId}")
-	public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable int empId ,@RequestBody EmployeePayrollDTO employeeDto) {
+	public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable int empId,
+			@RequestBody EmployeePayrollDTO employeeDto) {
 		EmployeePayrollData ePayrollData = null;
 		ePayrollData = iEmployeePayrollService.updateEmployeePayrollData(empId, employeeDto);
 		ResponseDTO responseDTO = new ResponseDTO("Update Employeepayroll Data Successfully", ePayrollData);
@@ -62,7 +62,7 @@ public class EmployeePayrollController {
 	@DeleteMapping("/delete/{empId}")
 	public ResponseEntity<ResponseDTO> deleteEmployeePayrollData(@PathVariable int empId) {
 		iEmployeePayrollService.deleteEmployeePayrollData(empId);
-		ResponseDTO responseDTO = new ResponseDTO(" Deleted Successfully", "Delete Id: " +empId);
+		ResponseDTO responseDTO = new ResponseDTO(" Deleted Successfully", "Delete Id: " + empId);
 		return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
 	}
 

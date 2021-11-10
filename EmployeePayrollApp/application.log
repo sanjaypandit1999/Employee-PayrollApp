@@ -75,3 +75,23 @@
 2021-11-11 00:17:14.101  INFO 12988 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Employee Payroll DB User is payrolluser
 2021-11-11 00:17:32.190  WARN 12988 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDTO> com.bridgelabz.employeepayrollapp.controllers.EmployeePayrollController.addEmployeePayrollData(com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'empName': rejected value [ajy]; codes [Pattern.employeePayrollDTO.empName,Pattern.empName,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.empName,empName]; arguments []; default message [empName],[Ljavax.validation.constraints.Pattern$Flag;@50fe4263,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee Name is invalid]] ]
 2021-11-11 00:18:53.006  WARN 12988 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.employeepayrollapp.dto.ResponseDTO> com.bridgelabz.employeepayrollapp.controllers.EmployeePayrollController.addEmployeePayrollData(com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'empName': rejected value [affjy]; codes [Pattern.employeePayrollDTO.empName,Pattern.empName,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.empName,empName]; arguments []; default message [empName],[Ljavax.validation.constraints.Pattern$Flag;@50fe4263,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee Name is invalid]] ]
+2021-11-11 01:09:44.911  INFO 16204 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17 on DESKTOP-U2KHA74 with PID 16204 (C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp\target\classes started by Sanju in C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp)
+2021-11-11 01:09:44.914 DEBUG 16204 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-11 01:09:44.915  INFO 16204 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-11 01:09:50.074  WARN 16204 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-11 01:09:50.696  WARN 16204 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-11-11 01:09:50.736  WARN 16204 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-11-11 01:09:50.867 ERROR 16204 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

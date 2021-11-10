@@ -221,6 +221,3 @@ java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.54.jar:9.0.54]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2021-11-10 16:28:11.810  INFO 14352 --- [main] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17 on DESKTOP-U2KHA74 with PID 14352 (C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp\target\classes started by Sanju in C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp)
-2021-11-10 16:28:11.812 DEBUG 14352 --- [main] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
-2021-11-10 16:28:11.812  INFO 14352 --- [main] c.b.e.EmployeePayrollApplication         : No active profile set, falling back to default profiles: default

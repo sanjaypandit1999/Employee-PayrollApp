@@ -1,5 +1,5 @@
 {"properties": [{
-  "name": "loging.level.com.bridgelabz",
+  "name": "enviroment",
   "type": "java.lang.String",
-  "description": "A description for 'loging.level.com.bridgelabz'"
+  "description": "A description for 'enviroment'"
 }]}

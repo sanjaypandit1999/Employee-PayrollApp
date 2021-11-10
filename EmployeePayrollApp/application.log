@@ -39,3 +39,9 @@
 2021-11-10 15:21:59.348 DEBUG 9540 --- [main] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
 2021-11-10 15:21:59.348  INFO 9540 --- [main] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
 2021-11-10 15:22:01.587  WARN 9540 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-10 15:22:01.879  INFO 9540 --- [main] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 2.947 seconds (JVM running for 3.599)
+2021-11-10 15:22:01.885  INFO 9540 --- [main] c.b.e.EmployeePayrollApplication         : Employee Payroll App Started in DEV Enviroment
+2021-11-10 15:26:26.828  INFO 7980 --- [main] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17 on DESKTOP-U2KHA74 with PID 7980 (C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp\target\classes started by Sanju in C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp)
+2021-11-10 15:26:26.829 DEBUG 7980 --- [main] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-10 15:26:26.831  INFO 7980 --- [main] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-10 15:26:29.063  WARN 7980 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

@@ -22,7 +22,7 @@ public class EmployeePayrollDTO {
 	public String gender;
 
 	@NotNull(message = "Date can not be empty, put date in DD-MMM-YYYY format")
-	@JsonFormat(pattern = "dd MMM yyyy")
+	@JsonFormat(pattern = "dd MM yyyy")
 	@PastOrPresent(message = "This is Future date!!!")
 	public LocalDate startDate;
 

@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.bridgelabz.employeepayrollapp.dto.ResponseDTO;
 
+import lombok.extern.slf4j.Slf4j;
+
 @ControllerAdvice
+@Slf4j
 public class EmployeePayrollExceptionHandler {
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ResponseDTO> handleMethodArgumentNotValidException(

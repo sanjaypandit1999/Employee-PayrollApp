@@ -1,24 +1,56 @@
 package com.bridgelabz.employeepayrollapp.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.*;
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+@Entity
+@Table(name = "employeepayroll_db")
 @Data
-@NoArgsConstructor
 public class EmployeePayrollData {
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.AUTO)
+	    @Column(name = "employee_id")
+	    private int employeeId;
+	    @Column(name = "name")
+	    private String name;
+	    @Column(name = "salary")
+	    private long salary;
+	    @Column(name = "gender")
+	    private String gender;
+	    @Column(name = "start_date")
+	    private LocalDate startDate;
+	    @Column(name = "note")
+	    private String note;
+	    @Column(name = "profile_pic")
+	    private String profilePic;
 
-	private int empId;
-	private String empName;
-	private String gender;
-	private List<String> departments;
-	private LocalDate startDate;
-	private long salary;
-	private String profilePic;
-	private String note;
+	    @ElementCollection
+	    @CollectionTable(name = "employee_department",
+	            joinColumns = @JoinColumn(name ="id"))
+	    @Column(name = "departments")
+	    private List<String> departments;
+	    
+	    public EmployeePayrollData() {
+	    }
+	    public EmployeePayrollData(EmployeePayrollDTO employeePayrollDTO){
+	        this.updateEmployeePayollData(employeePayrollDTO);
+	    }
+
+	    public void updateEmployeePayollData( EmployeePayrollDTO employeePayrollDTO) {
+	        this.name = employeePayrollDTO.empName;
+	        this.salary = employeePayrollDTO.salary;
+	        this.gender = employeePayrollDTO.gender;
+	        this.note = employeePayrollDTO.note;
+	        this.startDate = employeePayrollDTO.startDate;
+	        this.profilePic = employeePayrollDTO.profilePic;
+	        this.departments = employeePayrollDTO.departments;
+	    }
+
 
 }

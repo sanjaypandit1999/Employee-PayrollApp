@@ -29,6 +29,11 @@ public class EmployeePayrollService implements IEmployeePayrollService {
 		return employeePayrollRepository.findById(empId)
 				.orElseThrow(() -> new EmployeePayrollException("Employee ID:- " + empId + " Not Found"));
 	}
+	@Override
+	public List<EmployeePayrollData> getEmployeesPayrollDataByDepartment(String department) {
+		return employeePayrollRepository.findEmployeesByDepartment(department);
+	}
+
 
 	public EmployeePayrollData addEmployeePayrollData(EmployeePayrollDTO employeeDTO) {
 		EmployeePayrollData ePayrollData = null;

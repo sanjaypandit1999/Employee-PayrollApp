@@ -16,39 +16,39 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class EmployeePayrollService implements IEmployeePayrollService {
-	
+
 	@Autowired
 	EmployeePayrollRepository employeePayrollRepository;
 	List<EmployeePayrollData> empDataList = new ArrayList<>();
 
 	public List<EmployeePayrollData> getAllEmployeeData() {
-		return empDataList;
+		return employeePayrollRepository.findAll();
 	}
 
 	public EmployeePayrollData getEmployeeDataById(int empId) {
-		return empDataList.stream().filter(empData -> empData.getEmployeeId() == empId).findFirst()
-				.orElseThrow(() -> new EmployeePayrollException("Employee ID Not Found"));
+		return employeePayrollRepository.findById(empId)
+				.orElseThrow(() -> new EmployeePayrollException("Employee ID:- " + empId + " Not Found"));
 	}
 
 	public EmployeePayrollData addEmployeePayrollData(EmployeePayrollDTO employeeDTO) {
 		EmployeePayrollData ePayrollData = null;
 		ePayrollData = new EmployeePayrollData(employeeDTO);
-		empDataList.add(ePayrollData);
-		log.debug("Emp Name: " +ePayrollData.toString());
+		log.debug("Emp Name: " + ePayrollData.toString());
 		employeePayrollRepository.save(ePayrollData);
 		return ePayrollData;
 	}
 
 	public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO employeeDTO) {
 		EmployeePayrollData ePayrollData = this.getEmployeeDataById(empId);
-		ePayrollData.setName(employeeDTO.empName);
-		ePayrollData.setSalary(employeeDTO.salary);
-		empDataList.set(empId - 1, ePayrollData);
+		ePayrollData.updateEmployeePayollData(employeeDTO);
+		employeePayrollRepository.save(ePayrollData);
 		return ePayrollData;
 	}
 
 	public EmployeePayrollData deleteEmployeePayrollData(int empId) {
-		return empDataList.remove(empId - 1);
+		EmployeePayrollData ePayrollData = this.getEmployeeDataById(empId);
+		employeePayrollRepository.delete(ePayrollData);
+		return ePayrollData;
 	}
 
 }

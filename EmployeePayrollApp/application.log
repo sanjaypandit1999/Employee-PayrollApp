@@ -95,3 +95,14 @@ Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
+2021-11-11 13:04:21.079  INFO 11828 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17 on DESKTOP-U2KHA74 with PID 11828 (C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp\target\classes started by Sanju in C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp)
+2021-11-11 13:04:21.093 DEBUG 11828 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-11 13:04:21.093  INFO 11828 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-11 13:04:26.211  WARN 11828 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-11 13:04:26.777  INFO 11828 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 6.295 seconds (JVM running for 7.956)
+2021-11-11 13:04:26.780  INFO 11828 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Employee Payroll App Started in null Enviroment
+2021-11-11 13:04:26.781  INFO 11828 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Employee Payroll DB User is payrolluser
+2021-11-11 13:16:13.159  INFO 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Starting EmployeePayrollApplication using Java 17 on DESKTOP-U2KHA74 with PID 4432 (C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp\target\classes started by Sanju in C:\Users\Sanju\Desktop\Spring Project\Employee-PayrollApp\EmployeePayrollApp)
+2021-11-11 13:16:13.161 DEBUG 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
+2021-11-11 13:16:13.161  INFO 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
+2021-11-11 13:16:15.375  WARN 4432 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

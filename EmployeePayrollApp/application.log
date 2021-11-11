@@ -106,3 +106,6 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2021-11-11 13:16:13.161 DEBUG 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Running with Spring Boot v2.5.6, Spring v5.3.12
 2021-11-11 13:16:13.161  INFO 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : The following profiles are active: dev
 2021-11-11 13:16:15.375  WARN 4432 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-11 13:16:15.757  INFO 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Started EmployeePayrollApplication in 2.985 seconds (JVM running for 3.696)
+2021-11-11 13:16:15.760  INFO 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Employee Payroll App Started in null Enviroment
+2021-11-11 13:16:15.761  INFO 4432 --- [restartedMain] c.b.e.EmployeePayrollApplication         : Employee Payroll DB User is payrolluser

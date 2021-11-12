@@ -9,15 +9,17 @@ import com.bridgelabz.employeepayrollapp.model.EmployeePayrollData;
 
 @Service
 public interface IEmployeePayrollService {
-	public List<EmployeePayrollData> getAllEmployeeData();
 
 	public EmployeePayrollData getEmployeeDataById(int empId);
 
 	public EmployeePayrollData addEmployeePayrollData(EmployeePayrollDTO employeeDTO);
 
-	public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO employeeDTO);
+	public EmployeePayrollData updateEmployeePayrollData(String token, EmployeePayrollDTO employeeDTO);
 
-	public EmployeePayrollData deleteEmployeePayrollData(int empId);
+	public String deleteEmployeePayrollData(String token);
 	public List<EmployeePayrollData> getEmployeesPayrollDataByDepartment(String department);
+
+	public List<EmployeePayrollData> getAllEmployeeData(String token);
+	public List<EmployeePayrollData> getAllEmployeeData();
 
 }

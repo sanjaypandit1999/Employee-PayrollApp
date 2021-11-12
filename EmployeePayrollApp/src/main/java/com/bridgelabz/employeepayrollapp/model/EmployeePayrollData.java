@@ -50,6 +50,7 @@ public class EmployeePayrollData {
 	        this.startDate = employeePayrollDTO.startDate;
 	        this.profilePic = employeePayrollDTO.profilePic;
 	        this.departments = employeePayrollDTO.departments;
+	    
 	    }
 
 

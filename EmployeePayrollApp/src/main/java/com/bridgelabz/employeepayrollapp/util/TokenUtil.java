@@ -10,10 +10,23 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
 import com.auth0.jwt.interfaces.Verification;
 
+/**
+ * Create JWT token authorization
+ *
+ * @author Sanjay Pandit
+ * @version 0.0.1
+ * @since 10/11/2021
+ */
 @Component
 public class TokenUtil {
 	public final String TOKEN_SECRET = "Sanjay";
 
+	/**
+	 * Function to get particular token of employee id
+	 *
+	 * @param empId unique Id
+	 * @return JWT token
+	 */
 	public String createToken(Integer id) {
 		try {
 			// to set algorithm
@@ -31,6 +44,12 @@ public class TokenUtil {
 		return null;
 	}
 
+	/**
+	 * Function to get particular token of employee id
+	 *
+	 * @param token
+	 * @return userId data object
+	 */
 	public Integer decodeToken(String token) {
 		Integer userid;
 		// for verification algorithm

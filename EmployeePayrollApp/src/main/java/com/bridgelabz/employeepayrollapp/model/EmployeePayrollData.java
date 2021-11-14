@@ -9,6 +9,14 @@ import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 
 import lombok.Data;
 
+/**
+ * Create and maintains employee payroll data in object.
+ *
+ * @author Sanjay Pandit
+ * @version 0.0.1
+ * @since 10/11/2021
+ */
+
 @Entity
 @Table(name = "employeepayroll_db")
 @Data

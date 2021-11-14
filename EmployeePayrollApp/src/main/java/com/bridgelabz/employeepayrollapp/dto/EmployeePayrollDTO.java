@@ -13,6 +13,13 @@ import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.ToString;
+/**
+ * Receive data object from client
+ *
+ * @author Sanjay Pandit
+ * @version 0.0.1
+ * @since 10/11/2021
+ */
 @ToString
 public class EmployeePayrollDTO {
 	@Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "Employee Name is invalid")
